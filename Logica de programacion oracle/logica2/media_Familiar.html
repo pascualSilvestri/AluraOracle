@@ -1,0 +1,32 @@
+<meta charset="UTF-8" />
+
+<script>
+
+  document.write("<h1>Promedia edad familar</h1>");
+
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(algo) {
+    document.write(algo);
+    saltarLinea();
+  }
+
+  let numeroDeMiembros = parseInt(prompt('ingrese el total de mienbros de su familia'));
+  let contador=0;
+  let totalEdades = 0;
+
+  while (contador<numeroDeMiembros){
+    let edad = parseInt(prompt('ingrese la edad del familar'));
+    totalEdades = totalEdades + edad;
+    contador++;
+  }
+
+  let promedioEdad = totalEdades/numeroDeMiembros;
+
+  imprimir('El promedia de la edad de la familia es: '+promedioEdad);
+
+</script>

@@ -1,0 +1,23 @@
+<meta charset="UTF-8" />
+
+<script>
+    document.write("<h1>JUEGO DE ADIVINACION</h1>");
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(algo) {
+    document.write(algo);
+    saltarLinea();
+  }
+ let anioMundial = 1930;
+ let hasta= parseInt(prompt('Ingrese hasta que anio quiere saber si hubo mundial'))
+
+    while(anioMundial <= hasta){
+        imprimir('En este año hubo mundial: ' + anioMundial)
+        anioMundial = anioMundial + 4;
+        
+    }
+  </script>

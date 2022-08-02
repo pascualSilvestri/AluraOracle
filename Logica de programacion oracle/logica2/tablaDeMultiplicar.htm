@@ -1,0 +1,37 @@
+<meta charset="UTF-8" />
+
+<script>
+    document.write("<h1>tabla de multiplicar</h1>");
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(algo) {
+    document.write(algo);
+    saltarLinea();
+  }
+
+//   function multiplicar(a, hasta){
+//     let contador =0;
+//     while(contador <= prompt('Introduce hasta que numero multiplicar'+hasta)){
+//         imprimir(a + ' x ' + contador + ' = ' + a*contador);
+//     }
+//   }
+
+let contador =0;
+let NumeroAMultiplicar = prompt('Introduce de la tabla que numero multiplica');
+let hasta = prompt('Introduce hasta que numero multiplicar');
+    while(contador <= hasta){
+        imprimir(NumeroAMultiplicar + ' x ' + contador + ' = ' + NumeroAMultiplicar*contador);
+        contador++;
+    }
+
+    imprimir('FOR');
+
+    for(let i = 0; i <= hasta ; i++){
+        imprimir(NumeroAMultiplicar + ' x ' + i + ' = ' + NumeroAMultiplicar*i);
+    }
+
+  </script>

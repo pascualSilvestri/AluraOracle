@@ -1,0 +1,42 @@
+<meta charset="UTF-8" />
+
+<script>
+  document.write("<h1>Calcular puntos de fubtol</h1>");
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(algo) {
+    document.write(algo);
+    saltarLinea();
+  }
+
+  let victorias = parseInt(prompt("Cuantas victorias tuvo"));
+  let empates = parseInt(prompt("infome la cantidad de empates"));
+
+  let totalPuntos = victorias * 3 + empates;
+
+  imprimir(totalPuntos);
+
+  if (totalPuntos > 28) {
+
+    imprimir("El equipo esta mejor que el año pasado");
+    
+  }
+
+
+  if (totalPuntos < 28) {
+  
+    imprimir("El equipo esta peor que el año pasado");
+  
+  }
+
+  if (totalPuntos == 28) {
+  
+    imprimir("El equipo esta igual que el año pasado");
+
+  }
+
+</script>

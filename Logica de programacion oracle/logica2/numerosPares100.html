@@ -1,0 +1,26 @@
+<meta charset="UTF-8" />
+
+<script>
+
+  document.write("<h1>Promedia edad familar</h1>");
+
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(algo) {
+    document.write(algo);
+    saltarLinea();
+  }
+
+  let contador = 0;
+  let hasta = parseInt(prompt('hasta que numero llegar de pares'));
+  while (contador <= hasta){
+    imprimir(contador);
+    contador +=2;
+  }
+
+
+</script>

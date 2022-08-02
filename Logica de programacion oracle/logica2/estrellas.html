@@ -1,0 +1,23 @@
+<meta charset="UTF-8" />
+
+<script>
+  document.write("<h1>JUEGO DE ADIVINACION</h1>");
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(algo) {
+    document.write(algo);
+    saltarLinea();
+  }
+
+  for(let fila = 0; fila < 10; fila++) {
+    for(let columna = 0; columna < 10; columna++){
+        document.write('*');
+    }
+    saltarLinea();
+  }
+
+
+</script>

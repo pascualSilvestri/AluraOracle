@@ -1,0 +1,47 @@
+<meta charset="UTF-8" />
+
+<script>
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(algo) {
+    document.write(algo);
+    saltarLinea();
+  }
+
+  function calcularIMC(peso, altura) {
+    return peso / (altura * altura);
+  }
+
+  let nombre = prompt("informe su Nombre");
+
+  let pesoInformado = prompt(nombre + " informe su peso");
+
+  let alturaInformado = prompt(nombre + " informe su altura");
+
+  IMCCalculado = parseInt(calcularIMC(pesoInformado, alturaInformado));
+
+  imprimir("El IMC de " + nombre + " es: " + Math.round(IMCCalculado));
+
+  if (IMCCalculado < 18.5) {
+    imprimir("Abajo de lo recomendado");
+  }
+
+  if (IMCCalculado >= 18.5) {
+    if (IMCCalculado < 25) {
+      imprimir("Esta en el rango normal");
+    }
+  }
+
+  if (IMCCalculado >= 25) {
+    if (IMCCalculado < 30) {
+      imprimir("Esta en el rango normal");
+    }
+  }
+  if (IMCCalculado >= 30) {
+    imprimir("Conciderado obecidad");
+  }
+</script>

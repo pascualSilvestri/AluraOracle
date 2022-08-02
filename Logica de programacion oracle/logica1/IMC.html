@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+function saltarLinea(){
+
+  document.write('<br>');
+  document.write('<br>');
+  document.write('<br>');
+
+}
+
+function imprimir(algo){
+
+  document.write(algo);
+  saltarLinea();
+
+}
+
+function calcularIMC(peso,altura){
+
+  return (peso/(altura*altura));
+
+}
+
+
+let nombre = prompt('informe su Nombre');
+let pesoInformado = prompt(nombre+'informe su peso');
+let alturaInformado = prompt(nombre+'informe su altura');
+
+IMCCalculado = calcularIMC(pesoInformado,alturaInformado);
+
+imprimir('El IMC de '+nombre+' es: '+Math.round(IMCCalculado));
+
+</script>
+ 

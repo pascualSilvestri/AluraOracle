@@ -1,0 +1,40 @@
+<meta charset="UTF-8" />
+
+<script>
+  document.write("<h1>JUEGO DE ADIVINACION</h1>");
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(algo) {
+    document.write(algo);
+    saltarLinea();
+  }
+
+  function sorteo(n) {
+    return Math.round(Math.random() * n);
+  }
+
+  let numeroPensado = sorteo(prompt("Ingrese un numero"));
+  let intentos = 3;
+  let contador = 1;
+
+  while (contador <= intentos) {
+    let numeroLanzado = parseInt(prompt("Ingrese un numero para adivinar"));
+    if (numeroPensado == numeroLanzado) {
+      alert("Usted a acertado");
+      break;
+    } else if (numeroPensado > numeroLanzado) {
+      alert("Su numero es menor");
+      contador++;
+    } else {
+      alert("Su numero es mayor");
+      contador++;
+    }
+    if(contador == 4){
+        alert('Perdio, no pudo adivinar el numero')
+    }
+  }
+</script>

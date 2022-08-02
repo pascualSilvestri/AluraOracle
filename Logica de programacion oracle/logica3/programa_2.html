@@ -1,0 +1,34 @@
+<canvas width='600' height='400'>
+
+</canvas>
+
+<script>
+
+    function dibujarCuadrado(v1,v2,v3,v4,color){
+        let pantalla = document.querySelector('canvas');
+        let pincel = pantalla.getContext('2d');
+        pincel.fillStyle = color;
+        pincel.fillRect(v1, v2, v3, v4);
+        pincel.strokeStyle = '#000';
+        pincel.strokeRect(v1, v2, v3, v4);
+    }
+
+
+    function dibujarLineaDeCuadrados(cantidad,v1,v2,v3,v4,color){
+        for(let i=0; i<cantidad; i++){
+            dibujarCuadrado(v1,v2,v3,v4,color);
+            v1 += v3;
+        }
+    }
+
+    dibujarLineaDeCuadrados(6,0,0,50,50,'#555');
+
+    // dibujarCuadrado(0,0,50,50);
+    // dibujarCuadrado(50,0,50,50);
+    // dibujarCuadrado(100,0,50,50);
+    // dibujarCuadrado(150,0,50,50);
+
+
+
+
+</script>
