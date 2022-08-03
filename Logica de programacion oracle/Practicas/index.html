@@ -1,28 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prueba</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="container flex"></div>
-
-    <button id="btn"></button>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <script>
-        function crearDiv(arg,clase){
-            document.write(`<div class="${clase}">${arg}</div>`);
-        }
+      let arr = [];
+      let arr2 = ["asfgda", 123, 34, "asdas", "adasd"];
+      //   let prueba = prompt('prueba');
 
-        function div(arg,clase){
-            return `<div class="${clase}">${arg}</div>`
+ //   Introduce por teclado y lo guarda en un array 
+      function introducirArr() {
+        let arr = [];
+        let intro = prompt("escribe algo");
+        arr.push(intro);
+        return arr;
+      }
+    //   Introduce por teclado y lo guarda en un array de acuerdo a la cantida de argument que le pase
+      function introducir(arg) {
+        let arr = [];
+        for (let i = 0; i < arg; i++) {
+          let intro = prompt("escribe algo");
+          arr.push(intro);
         }
-        const contenedor = document.querySelector('.container');
-        contenedor.innerHTML = '<div class="medio"></div>';
+        return arr;
+      }
+    //   introduce por teclado y guarda en array separado todo dentro de otro array 
+      function arra(arg) {
+        let arr = [];
+        for (let i = 0; i < arg; i++) {
+          arr.push(introducirArr());
+        }
+        return arr;
+      }
+
+
+      function IntroducirPorPantalla(arg) {
+        prompt(`${arg}`);
+      }
+
+
+      function mostrarArr(arg) {
+        for (let i = 0; i < arg.length; i++) {
+          document.write(arg[i]);
+          console.log(arg[i]);
+        }
+      }
+
+      function mostrarTodo(arg, arg2 = 0) {
+        if (arg2 == 0) {
+          mostrarArr(arg);
+        } else {
+          mostrarArr(arra(arg2));
+        }
+      }
+
+      
+      arr = introducir(2);
+      mostrarArr(arr)
+
+      //   mostrarTodo(arr2,4);
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        const abc={b:'a',c:'b',d:'c',e:'d',f:'e',g:'f',h:'g',i:'h',j:'i',k:'j',l:'k',m:'l',n:'m',o:'n',p:'o',q:'p',r:'q',s:'r',t:'s',u:'t',v:'u',w:'v',x:'w',y:'x',z:'y',a:'z'};
+
+        let palabras = prompt('ingresa una palabra');
+        // let letra = prompt('ingresa una letra');
+
+        
+
+
+
+        // VERSION CORTA
+
+
+        function evaluar2(arg){
+            let arr = [];
+            for (let i=0; i < arg.length; i++) {
+                for(prop in abc){
+                    if(prop == arg[i]){
+                        arr.push(abc[prop]);
+                    }
+                }
+
+            }
+            return arr.join('');
+        }
+
+
+
+
+                    // VERSION LARGA
+
+        function evaluar(arg){
+            let arr = [];
+            for (let i=0; i < arg.length; i++) {  
+
+                if(arg[i]=='a'){
+                    arr.push('z');
+                }else if(arg[i]=='b'){
+                    arr.push('a');
+                }if(arg[i]=='c'){
+                    arr.push('b');
+                }if(arg[i]=='d'){
+                    arr.push('c');
+                }if(arg[i]=='e'){
+                    arr.push('d');
+                }if(arg[i]=='f'){
+                    arr.push('e');
+                }if(arg[i]=='g'){
+                    arr.push('f');
+                }if(arg[i]=='h'){
+                    arr.push('g');
+                }if(arg[i]=='i'){
+                    arr.push('h');
+                }if(arg[i]=='j'){
+                    arr.push('i');
+                }if(arg[i]=='k'){
+                    arr.push('j');
+                }if(arg[i]=='l'){
+                    arr.push('k');
+                }if(arg[i]=='m'){
+                    arr.push('l');
+                }if(arg[i]=='n'){
+                    arr.push('m');
+                }if(arg[i]=='o'){
+                    arr.push('n');
+                }if(arg[i]=='p'){
+                    arr.push('o');
+                }if(arg[i]=='q'){
+                    arr.push('p');
+                }if(arg[i]=='r'){
+                    arr.push('q');
+                }if(arg[i]=='s'){
+                    arr.push('r');
+                }if(arg[i]=='t'){
+                    arr.push('s');
+                }if(arg[i]=='u'){
+                    arr.push('t');
+                }if(arg[i]=='w'){
+                    arr.push('u');
+                }if(arg[i]=='x'){
+                    arr.push('w');
+                }if(arg[i]=='y'){
+                    arr.push('x');
+                }if(arg[i]=='z'){
+                    arr.push('a');
+                }
+            }
+            return arr.join('');
+        }
+
+
+        let arr2 = evaluar2(palabras);
+
+        console.log(arr2);
+
+
+    </script>
+    
+</body>
+</html>
